@@ -1,0 +1,70 @@
+/*Sucheta got a number ‘n’ as input. She got an another number ‘p’ as input. Now she got the task to identify that the pth from left is 1 or 0.
+
+Input Format
+
+Enter the value of n & p separated by space.
+
+Constraints
+
+1< = n <= 255 1<= p <=8
+
+Output Format
+
+Print “Yes’ for 1 & “No” for 0.
+
+Sample Input 0
+
+32 3
+Sample Output 0
+
+No
+/*
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n,p,count=0,rem=0;
+    scanf("%d %d",&n,&p);
+    while(n!=0)
+    {
+        n=n/10;
+        count++;
+        
+    }
+    if(count<p)
+    {
+        printf("No");
+        
+    }
+    else if(count==p)
+    {
+        rem=n%10;
+        if(rem==1)
+        {
+            printf("Yes");
+        }
+        else
+            printf("No");
+        
+    }
+    else if(count>p)
+    {
+        n/=10;
+        rem=n%10;
+        if(rem==1)
+        {          
+            printf("Yes");
+        }
+        else
+            printf("No");
+        
+    }
+    else
+        printf("No");
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
