@@ -1,0 +1,59 @@
+Arjun was working on a research paper based on binary number system. He designed an algorithm to find maximum number of consecutive set bits in the binary array.
+
+Binary array is an array that contains only 0’s & 1’s.
+
+Input Format
+
+Given the value of ‘n’ an array of size ‘n’ as input in two separate lines.
+
+Constraints
+
+1<= n <= 20
+
+Output Format
+
+Print the integer output.
+
+Sample Input 0
+
+4
+0 0 0 0
+Sample Output 0
+
+0
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+   int arr[20],n,i,count=0,res=0;
+    scanf("%d",&n);
+    if(n<=20&&n>=1)
+    {
+        for(i=0;i<n;i++)
+        {
+            scanf("%d ", &arr[i]);
+            
+        }
+        for(i=0;i<n;i++)
+        {
+            if(arr[i]==0)
+            {
+                count=0;
+            }
+            else
+            {
+                count++;
+                res=((res>count)?res:count);
+            }
+        }
+        printf("%d",res);
+    }
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
