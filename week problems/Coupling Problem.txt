@@ -1,0 +1,45 @@
+/*Pooja has three gloves in his almirah. Each glove has one of 20 possible colours, which are represented by integers between 1 and 20. Specifically, the colours of the gloves are A,B & C.
+
+Pooja has to wear two gloves during winters which have the same colour. Help Pooja find out if that is possible or not.
+
+Input Format
+
+First line contains integer input for the color of the three gloves A,B & C.
+
+Constraints
+
+1 <= A,B,C <= 20
+
+Output Format
+
+If pair found print “Yes” otherwise “No”.
+
+Sample Input 0
+
+1 2 3
+Sample Output 0
+
+No*/
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if((a<=20&&a>=1)&&(b<=20&&b>=1)&&(c>=1&&c<=20))
+    {
+        if((a==b)||(b==c)||(a==c))
+            printf("Yes");
+        else
+        {
+            printf("No");
+        }
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
