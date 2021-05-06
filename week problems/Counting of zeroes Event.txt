@@ -1,0 +1,59 @@
+*/ Kavya got the task to find the factorial of a number ‘n’ using recursion in the test, but after completing the test he think about counting the number of zeores in the factorial of number.
+
+He solves the factorial using recursion and also find the number of trailing zeroes in the answer to get complete marks in programming.
+
+Input Format
+
+Enter a number ‘n’ and it should only be integer.
+
+Constraints
+
+0<= n <= 20
+
+Output Format
+
+Print the number of trailing zeroes.
+
+Sample Input 0
+
+8
+Sample Output 0
+
+1
+/*
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int rec(int num);
+
+
+int main() {
+int n,count=0;
+    scanf("%d",&n);
+    if(n>=0&&n<=20)
+    {
+        int res=rec(n);
+    while(res!=0)
+    {
+        int rem=res%10;
+        if(rem!=0)
+        {
+            break;
+        }
+        else
+            count++;
+        res/=10;
+    }
+         printf("%d",count);
+    }
+   
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+int rec(int num)
+{
+    return num*rec(num-1);
+}
